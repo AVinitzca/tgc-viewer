@@ -30,17 +30,14 @@ namespace TGC.Examples.MeshExamples
 
         public override void Init()
         {
-            //CurrentPath = @"C:\Users\Mito\Documents\GitHub\tgc-viewer\TGC.Viewer\bin\Debug\Media\Obj\cubotexturacaja.obj";
-            CurrentPath = @"C:\Users\Mito\Documents\GitHub\tgc-viewer\TGC.Viewer\bin\Debug\Media\Obj\bb8\bb8.obj";
-            //CurrentPath = @"C:\Users\Mito\Documents\GitHub\tgc-viewer\TGC.Viewer\bin\Debug\Media\Obj\tgcito\tgcito con textura.obj";
-            //CurrentPath = @"C:\Users\Mito\Documents\GitHub\tgc-viewer\TGC.Viewer\bin\Debug\Media\Obj\tgcito\tgcito color solo.obj";
+            //CurrentPath = MediaDir + @"\Obj\cubotexturacaja.obj";
+            CurrentPath = MediaDir + @"\Obj\bb8\bb8.obj";
+            //CurrentPath = MediaDir + @"\Obj\tgcito\tgcito con textura.obj";
+            //CurrentPath = MediaDir + @"\Obj\tgcito\tgcito color solo.obj";
 
             MeshModifier = AddFile("Mesh", CurrentPath, "*.obj | *.obj");
 
-            //MeshDelObj = TgcObjLoader.LoadTgcMeshFromObj(CurrentPath, 0);
             MeshDelObj = TgcObjLoader.LoadTgcMeshFromObj(CurrentPath, 0);
-            //MeshDelObj = TgcObjLoader.LoadTgcMeshFromObj(CurrentPath, 0);
-            //MeshDelObj = TgcObjLoader.LoadTgcMeshFromObj(CurrentPath, 0);
 
             MeshDelObj.AutoTransform = true;
             MeshDelObj.Scale = new TGCVector3(5f, 5f, 5f);
