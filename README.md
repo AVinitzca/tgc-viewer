@@ -34,6 +34,8 @@ Es un motor de renderizado 3D académico utilizado para realizar los trabajos pr
         4. [Microsoft Build Tools 2015](https://www.microsoft.com/es-ar/download/details.aspx?id=48159)
         5. [Xamarin Studio Community](https://dl.xamarin.com/MonoDevelop/Windows/XamarinStudio-6.3.0.863.msi)
 
+**Tener en cuenta que por ahora hay un problema de dependencias. Al instalarse TGC.SceneLoader este instala TGC.Core cosa que no queremos que pase. La solucion es despues que Nuget restaura los paquetes se va a referencias y se quita la libreria TGC.Core y se vuelve a agregar la solución TGC.Core.**
+
 ### Colaboradores
 * [Daniela Kazarian](https://github.com/Dkazarian)
 * [Leandro Barbagallo](https://github.com/lebarba)

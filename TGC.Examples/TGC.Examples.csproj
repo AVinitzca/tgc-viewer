@@ -87,8 +87,8 @@
       <HintPath>..\..\..\..\..\..\Windows\Microsoft.NET\DirectX for Managed Code\1.0.2902.0\Microsoft.DirectX.DirectSound.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml" />
-    <Reference Include="TGC.SceneLoader">
-      <HintPath>..\..\tgc-scene-loader\TGC.SceneLoader\bin\Debug\TGC.SceneLoader.dll</HintPath>
+    <Reference Include="TGC.SceneLoader, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\TGC.SceneLoader.1.0.0\lib\net471\TGC.SceneLoader.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -371,12 +371,6 @@
     <Compile Include="WorkshopShaders\Transformers.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TGC.Core\TGC.Core.csproj">
-      <Project>{2b8c77a8-2427-4da0-a33e-93f877b2d7d9}</Project>
-      <Name>TGC.Core</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Others\EjemploDefaultHelpForm.resx">
       <DependentUpon>EjemploDefaultHelpForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -516,7 +510,12 @@
     <Content Include="Shaders\WorkshopShaders\ToonShading.fx" />
     <Content Include="Shaders\WorkshopShaders\VolRender.fx" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\TGC.Core\TGC.Core.csproj">
+      <Project>{2b8c77a8-2427-4da0-a33e-93f877b2d7d9}</Project>
+      <Name>TGC.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

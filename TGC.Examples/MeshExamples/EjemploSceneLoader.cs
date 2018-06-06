@@ -16,7 +16,7 @@ namespace TGC.Examples.MeshExamples
 
         private string CurrentPath { get; set; }
 
-        //Importardor de mesh por obj
+        //Importador de mesh en formato obj
         private TGCObjLoader TgcObjLoader { get; set; } = new TGCObjLoader();
 
         private TgcMesh MeshDelObj { get; set; }
@@ -59,12 +59,12 @@ namespace TGC.Examples.MeshExamples
 
             DrawText.drawText("Buscar y abrir un archivo obj solo o uno con mtl.", 0, 20, Color.OrangeRed);
 
-            //Ver si cambio la malla
+            //Ver si cambio el mesh
             var selectedPath = MeshModifier.Value;
             if (CurrentPath != selectedPath)
             {
                 //TODO si utilizo el mismo Builder falla porque no limpia el mtl viejo.
-                TgcObjLoader = new TGCObjLoader(); ;
+                TgcObjLoader = new TGCObjLoader();
                 MeshDelObj = TgcObjLoader.LoadTgcMeshFromObj(selectedPath, 0);
                 CurrentPath = selectedPath;
             }
